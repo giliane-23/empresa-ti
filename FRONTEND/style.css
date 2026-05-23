@@ -1,0 +1,202 @@
+/* Estilo para a página de índice */
+body.index {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #F4F7FA;
+    /* fundo mais elegante */
+    color: #0A2F4D;
+    /* texto principal */
+}
+
+#imag {
+    width: 100%;
+    border: 1.8px solid #0A2F4D;
+    margin: 10px;
+    padding: 5px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.servicos {
+    background-color: #F4F7FA;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.servicos h2 {
+    color: #0A2F4D;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+
+.cards {
+    display: flex;
+    /* coloca os cards lado a lado*/
+    flex-wrap: wrap;
+    /* quebra linha se faltar espaço*/
+    justify-content: center;
+    /*centraliza*/
+    gap: 20px;
+    /*espaço entre os cards*/
+}
+
+@mwsia (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        /* empilha os cards verticalmente em telas menores*/
+        align-items: center;
+        /* centraliza os cards na vertical*/
+    }
+}
+
+.card {
+    background-color: #FFFFFF;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    /*animação suave*/
+}
+
+.card h3 {
+    color: #0A2F4D;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    /* Quando passa o mouse:⬆️ O card sobe 8px.Isso deixa o site moderno.*/
+}
+
+.btn {
+    margin-top: 40px;
+    padding: 12px 30px;
+    background-color: #0A2F4D;
+    color: #eceded;
+    border: none;
+    border-radius: 30px;
+    /*botão arredondado*/
+    font-weight: bold;
+    cursor: pointer;
+    /*pointer → vira mãozinha*/
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #94ccf7;
+}
+
+.admin-link {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #999;
+
+}
+
+.admin-link:hover {
+    color: #333;
+}
+
+p {
+    text-align: center;
+    font: size 18px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+
+/* Estilo para a página de contato */
+/*----------------------------------------------------------------------------------------------------*/
+
+body.contato {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #F4F7FA;
+    color: #0A2F4D;
+}
+
+#img {
+    width: 100%;
+    border: 1.8px solid #0A2F4D;
+    margin: 10px;
+    padding: 5px;
+}
+
+main {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    /* ocupa 100% da largura do main */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #0A2F4D;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #94ccf7;
+}
+
+.btn-voltar {
+
+    padding: 12px 20px;
+    background-color: #0A2F4D;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-voltar:hover {
+    background-color: #94ccf7;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="inicio">
+        <h1>Painel Administrativo</h1>
+        <h2 id="contadorPendentes">Solicitações pendentes: 0</h2>
+    </header>
+
+    <section class="servicos">
+
+        <h2>Orçamentos</h2>
+
+        <div id="listaOrcamentos" class="cards"></div>
+
+    </section>
+
+    <script>
+
+        function carregarOrcamentos() {
+
+            fetch("http://localhost:8080/orcamentos")
+
+                .then(response => response.json())
+
+                .then(dados => {
+
+                    const lista = document.getElementById("listaOrcamentos");
+
+                    lista.innerHTML = "";
+
+                    let pendentes = 0;
+
+                    dados.forEach(orcamento => {
+
+                        if (orcamento.concluido) {
+                            return;
+                        }
+
+                        pendentes++;
+
+                        const card = document.createElement("div");
+
+                        card.className = "card";
+
+                        card.innerHTML = `
+
+<h3>${orcamento.nome}</h3>
+
+<p><b>Email:</b> ${orcamento.email}</p>
+
+<p><b>Telefone:</b> ${orcamento.telefone}</p>
+
+<p><b>Mensagem:</b> ${orcamento.mensagem}</p>
+
+<p><b>Status:</b> Pendente ⏳</p>
+
+<button onclick="concluir(${orcamento.id})" class="btn">
+Marcar Concluído
+</button>
+
+`;
+
+                        lista.appendChild(card);
+
+                    });
+
+                    document.getElementById("contadorPendentes").innerText =
+                        "Solicitações pendentes: " + pendentes;
+
+                });
+
+        }
+
+        function concluir(id) {
+
+            fetch(`http://localhost:8080/orcamentos/${id}/concluir`, {
+                method: "PUT"
+            })
+                .then(() => {
+                    carregarOrcamentos();
+                });
+
+        }
+
+        carregarOrcamentos();
+
+    </script>
+
+</body>
+
+</html>
