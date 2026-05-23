@@ -38,13 +38,13 @@ Interface do sistema desenvolvida em HTML e CSS que consome os endpoints da API.
 # 🖼️ Telas do Sistema
 
 ### 🏠 Tela Inicial
-![🏠 Tela Inicial](./imgpaginas/index.png)
+![🏠 Tela Inicial](./imgpaginas/index.JPG)
 
 ### 📄 Formulário de Orçamento
-![📄 Formulário](./imgpaginas/contato.png)
+![📄 Formulário](./imgpaginas/contato.JPG)
 
 ### 🛠️ Backend Spring Boot
-![🛠️ Backend](./imgpaginas/admin.png)
+![🛠️ Backend](./imgpaginas/admin.JPG)
 
 ## Como rodar o projeto
 
