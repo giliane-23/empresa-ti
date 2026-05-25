@@ -49,7 +49,7 @@ Interface do sistema desenvolvida em HTML e CSS que consome os endpoints da API.
 ## Como rodar o projeto
 
 1. Clonar o repositório
-git clone https://github.com/giliane-23/empresa-servicos-ti
+git clone [https://github.com/giliane-23/empresa-ti.git]
 
 2. Abrir no IntelliJ ou VS Code
 
